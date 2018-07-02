@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title> Prognosis Weather: </title>
+
+</head>
+<body>
+
+<br/>
+
+
+<div style="text-align: center">
+    <br/>
+    <br/>
+
+    <form action="/prognosis" method="post">
+        <input th:name="city" placeholder="Enter city">
+        <input type="submit" value="Show">
+    </form>
+
+    <br/>
+
+    <h1> Weather prognosis: </h1>
+
+    <br/>
+
+    <span> Day 1 </span>
+
+    <br/>
+    <br/>
+
+    <table align="center" border="1" style="background-color: aliceblue">
+        <tr>
+            <td>Date: </td>
+            <td>Temperature: </td>
+            <td>Cloudiness:</td>
+            <td>Pressure:</td>
+            <td>Wind speed:</td>
+            <td>Humidity:</td>
+        </tr>
+
+        <tr>
+            <td th:if="${dt} != null" th:text="${dt}"></td>
+            <td th:if="${temp} != null" th:text="${temp}"></td>
+            <td th:if="${cloud} != null" th:text="${cloud}"></td>
+            <td th:if="${press} != null" th:text="${press}"></td>
+            <td th:if="${winds} != null" th:text="${winds}"></td>
+            <td th:if="${humid} != null" th:text="${humid}"></td>
+
+        </tr>
+
+        <tr>
+            <td> dd/mm/yy </td>
+            <td> C </td>
+            <td> % </td>
+            <td> hPa </td>
+            <td> km/h </td>
+            <td> % </td>
+        </tr>
+
+    </table>
+
+    <br/>
+
+    <span> Day 2 </span>
+
+    <br/>
+    <br/>
+
+    <table align="center" border="1" style="background-color: aliceblue">
+        <tr>
+            <td>Date: </td>
+            <td>Temperature: </td>
+            <td>Cloudiness:</td>
+            <td>Pressure:</td>
+            <td>Wind speed:</td>
+            <td>Humidity:</td>
+        </tr>
+
+        <tr>
+
+            <td th:if="${dt2} != null" th:text="${dt2}"></td>
+            <td th:if="${temp2} != null" th:text="${temp2}"></td>
+            <td th:if="${cloud2} != null" th:text="${cloud2}"></td>
+            <td th:if="${press2} != null" th:text="${press2}"></td>
+            <td th:if="${winds2} != null" th:text="${winds2}"></td>
+            <td th:if="${humid2} != null" th:text="${humid2}"></td>
+
+        </tr>
+
+        <tr>
+            <td> dd/mm/yy </td>
+            <td> C </td>
+            <td> % </td>
+            <td> hPa </td>
+            <td> km/h </td>
+            <td> % </td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <span> Day 3 </span>
+
+    <br/>
+    <br/>
+
+    <table align="center" border="1" style="background-color: aliceblue">
+
+        <tr>
+            <td>Date: </td>
+            <td>Temperature: </td>
+            <td>Cloudiness:</td>
+            <td>Pressure:</td>
+            <td>Wind speed:</td>
+            <td>Humidity:</td>
+        </tr>
+
+        <tr>
+
+            <td th:if="${dt3} != null" th:text="${dt3}"></td>
+            <td th:if="${temp3} != null" th:text="${temp3}"></td>
+            <td th:if="${cloud3} != null" th:text="${cloud3}"></td>
+            <td th:if="${press3} != null" th:text="${press3}"></td>
+            <td th:if="${winds3} != null" th:text="${winds3}"></td>
+            <td th:if="${humid3} != null" th:text="${humid3}"></td>
+
+        </tr>
+
+        <tr>
+            <td> dd/mm/yy </td>
+            <td> C </td>
+            <td> % </td>
+            <td> hPa </td>
+            <td> km/h </td>
+            <td> % </td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <span> Day 4 </span>
+
+    <br/>
+    <br/>
+
+    <table align="center" border="1" style="background-color: aliceblue">
+        <tr>
+            <td>Date: </td>
+            <td>Temperature: </td>
+            <td>Cloudiness:</td>
+            <td>Pressure:</td>
+            <td>Wind speed:</td>
+            <td>Humidity:</td>
+        </tr>
+
+        <tr>
+            <td th:if="${dt4} != null" th:text="${dt4}"></td>
+            <td th:if="${temp4} != null" th:text="${temp4}"></td>
+            <td th:if="${cloud4} != null" th:text="${cloud4}"></td>
+            <td th:if="${press4} != null" th:text="${press4}"></td>
+            <td th:if="${winds4} != null" th:text="${winds4}"></td>
+            <td th:if="${humid4} != null" th:text="${humid4}"></td>
+
+        </tr>
+
+        <tr>
+            <td> dd/mm/yy </td>
+            <td> C </td>
+            <td> % </td>
+            <td> hPa </td>
+            <td> km/h </td>
+            <td> % </td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <span> Day 5 </span>
+
+    <br/>
+    <br/>
+
+    <table align="center" border="1" style="background-color: aliceblue">
+        <tr>
+            <td>Date: </td>
+            <td>Temperature: </td>
+            <td>Cloudiness:</td>
+            <td>Pressure:</td>
+            <td>Wind speed:</td>
+            <td>Humidity:</td>
+        </tr>
+
+        <tr>
+            <td th:if="${dt5} != null" th:text="${dt5}"></td>
+            <td th:if="${temp5} != null" th:text="${temp5}"></td>
+            <td th:if="${cloud5} != null" th:text="${cloud5}"></td>
+            <td th:if="${press5} != null" th:text="${press5}"></td>
+            <td th:if="${winds5} != null" th:text="${winds5}"></td>
+            <td th:if="${humid5} != null" th:text="${humid5}"></td>
+        </tr>
+
+        <tr>
+            <td> dd/mm/yy </td>
+            <td> C </td>
+            <td> % </td>
+            <td> hPa </td>
+            <td> km/h </td>
+            <td> % </td>
+        </tr>
+    </table>
+
+    <br/>
+
+    <a href="/"> Current weather </a>
+
+</div>
+
+</body>
+</html>
