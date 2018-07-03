@@ -8,11 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
-import java.util.Calendar;
-
 /* todo improve and develop app in terms of frontend, */
 
 @Controller
