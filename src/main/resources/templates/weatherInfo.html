@@ -26,7 +26,7 @@
     <br/>
 
     <table align="center" border="1" style="background-color: aliceblue">
-        <tr>
+        <tr style="background-color: orange">
             <td>Temperature: </td>
             <td>Cloudiness:</td>
             <td>Pressure:</td>
@@ -40,10 +40,9 @@
             <td th:if="${pressure} != null" th:text="${pressure}"></td>
             <td th:if="${wind} != null" th:text="${wind}"></td>
             <td th:if="${humidity} != null" th:text="${humidity}"></td>
-
         </tr>
 
-        <tr>
+        <tr style="background-color: orange">
             <td> &degC </td>
             <td> % </td>
             <td> hPa </td>

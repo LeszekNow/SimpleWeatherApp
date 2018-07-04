@@ -31,10 +31,10 @@ public class CurrentWeatherController {
 
     @PostMapping("/")
     public String index(@RequestParam("city") String city, Model model) {
-        model.addAttribute("temp", convertTempIntoC(weatherService.makeCall(city).getGlobalStats().getTemperature()));
+        model.addAttribute("temp", roundTempPressWind(convertTempIntoC(weatherService.makeCall(city).getGlobalStats().getTemperature())));
         model.addAttribute("cloudiness", weatherService.makeCall(city).getCloudStats().getCloudyPercent());
-        model.addAttribute("pressure", weatherService.makeCall(city).getGlobalStats().getPressure());
-        model.addAttribute("wind", convertSpeedIntoKmh(weatherService.makeCall(city).getWindStats().getWindSpeed()));
+        model.addAttribute("pressure", roundTempPressWind(weatherService.makeCall(city).getGlobalStats().getPressure()));
+        model.addAttribute("wind", roundTempPressWind(convertSpeedIntoKmh(weatherService.makeCall(city).getWindStats().getWindSpeed())));
         model.addAttribute("humidity", weatherService.makeCall(city).getGlobalStats().getHumidity());
 
         return "weatherInfo";
@@ -46,6 +46,11 @@ public class CurrentWeatherController {
 
     public float convertSpeedIntoKmh(float speedInMs) {
         return speedInMs * (float) 3.6;
+    }
+
+    public double roundTempPressWind(float value){
+        double scale = Math.pow(10,1);
+        return (double)Math.round(value*scale)/scale;
     }
 
 }
