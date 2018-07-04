@@ -8,8 +8,8 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DayWeatherModel {
 
-    @JsonProperty("dt_txt")
-    private String dateTime;
+    @JsonProperty("dt")
+    private long dateTime;
     @JsonProperty("main")
     private TempHumPressStats globalStats;
     @JsonProperty("wind")
